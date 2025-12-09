@@ -119,3 +119,4 @@ modalClose.addEventListener("click", (event) => {
   event.preventDefault();
   modal.classList.remove("is-open");
 });
+
