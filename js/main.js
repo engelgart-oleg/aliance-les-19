@@ -103,12 +103,13 @@ const swiperThree= new Swiper(".blog-slider", {
   },
 });
 
-
 // Скрипт модального окна
 const modal = document.querySelector(".modal");
+const modalDialog = document.querySelector(".modal");
 const modalToggle = document.querySelectorAll("[data-toggle=modal]");
 const modalClose = document.querySelector(".modal-close");
 console.log(modalToggle);
+
 modalToggle.forEach((element) => {
   element.addEventListener("click", (event) => {
     event.preventDefault();
