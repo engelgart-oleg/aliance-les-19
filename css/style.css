@@ -13,10 +13,6 @@ html {
   font-size: 1rem;
 }
 
-body {
-  font-family: "Noto Sans", sans-serif;
-}
-
 .button {
   display: inline-block;
 
@@ -1668,6 +1664,7 @@ body {
   .modal-text {
     font-size: 14px;
     margin-bottom: 18px;
+    max-width: 235px;
   }
   .input-group-vertical {
     margin-bottom: 20px;

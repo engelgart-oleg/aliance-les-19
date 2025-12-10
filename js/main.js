@@ -103,12 +103,13 @@ const swiperThree= new Swiper(".blog-slider", {
   },
 });
 
-// Скрипт модального окна
+
+
 const modal = document.querySelector(".modal");
 const modalDialog = document.querySelector(".modal");
 const modalToggle = document.querySelectorAll("[data-toggle=modal]");
 const modalClose = document.querySelector(".modal-close");
-console.log(modalToggle);
+const body = document.body;
 
 modalToggle.forEach((element) => {
   element.addEventListener("click", (event) => {
@@ -120,3 +121,18 @@ modalClose.addEventListener("click", (event) => {
   event.preventDefault();
   modal.classList.remove("is-open");
 });
+
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) closeModal();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.classList.contains("is-open")) {
+    closeModal();
+  }
+});
+
+function closeModal() {
+  modal.classList.remove("is-open");
+}
